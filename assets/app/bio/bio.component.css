@@ -1,0 +1,15 @@
+.bio-img {
+    padding: 25px 10px;
+    max-height: 300px;
+    margin: auto;
+}
+
+.bio-text {
+    font-size: 1.3em;
+    color: #a6a6a6;
+    padding: 2px 16px;
+}
+
+.bio-p {
+    list-style-type: none;
+}

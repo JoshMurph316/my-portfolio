@@ -1,0 +1,38 @@
+textarea {
+    resize: none;
+    height: 200px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.radio-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: steelblue;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.active {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: lightblue;
+    color: #000;
+    border-radius: 5px;
+}
+
+.radio-btn:hover {
+    background-color: lightblue;
+    color: #000;
+}
+
+.radio-input {
+    display: none;
+}
+
+.optional-text {
+    color: grey;
+    font-size: .8em;
+}

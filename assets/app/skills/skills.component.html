@@ -1,0 +1,18 @@
+<div class="card container-fluid">
+
+    <h3>Web Development Skills</h3>
+
+    <ul class="nav nav-tabs">
+        <li class="tab-links" [ngClass]="{active: currentView === 'front-end'}"><a (click)="onFrontClick()">Front End</a></li>
+        <li class="tab-links" [ngClass]="{active: currentView === 'back-end'}"><a (click)="onBackClick()">Back End</a></li>
+        <li class="tab-links" [ngClass]="{active: currentView === 'dev-ops'}"><a (click)="onDevClick()">Dev Ops</a></li>
+        <li class="tab-links" [ngClass]="{active: currentView === 'progress'}"><a (click)="onProgressClick()">Progress</a></li>
+    </ul>
+    <div class="router-content">
+        <app-front-end *ngIf="currentView === 'front-end'"></app-front-end>
+        <app-back-end *ngIf="currentView === 'back-end'"></app-back-end>
+        <app-dev-ops *ngIf="currentView === 'dev-ops'"></app-dev-ops>
+        <app-progression *ngIf="currentView === 'progress'"></app-progression>
+    </div>
+
+</div>

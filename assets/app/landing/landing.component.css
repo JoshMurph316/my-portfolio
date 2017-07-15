@@ -1,0 +1,23 @@
+.landing-container {
+    text-align: center;
+}
+
+.form-container {}
+
+.landing-text {
+    padding: 5px 0;
+}
+
+.btn-hire {
+    padding: 10px 20px;
+    background-color: #a6a6a6;
+    color: lavender;
+    font-size: 1.4em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btn-hire:hover {
+    text-decoration: none;
+    color: #161616;
+}

@@ -1,0 +1,33 @@
+<h3>Contact me</h3>
+<form class="form-group">
+    <div class="col-xs-8">
+        <label for="name">name:</label>
+        <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
+
+        <label for="email">email:</label>
+        <input class="form-control" type="email" name="email" id="email" placeholder="email" required>
+
+        <br>
+
+        <h4>Reason for reaching out:</h4>
+        <label [ngClass]="{active: radio === 'job'}" class="radio-btn">
+                    <input class="radio-input" (click)="onRadio('job')" type="radio" name="options" id="option1" autocomplete="off">
+                Job
+                </label>
+        <label [ngClass]="{active: radio === 'project'}" class="radio-btn">
+                    <input class="radio-input" (click)="onRadio('project')" type="radio" name="options" id="option2" autocomplete="off" checked>
+                    Project
+                </label>
+        <label [ngClass]="{active: radio === 'other'}" class="radio-btn">
+                    <input class="radio-input" (click)="onRadio('other')" type="radio" name="options" id="option3" autocomplete="off">
+                    Other
+                </label>
+    </div>
+    <div class="col-xs-4">
+        <label for="message">brief message <span class="optional-text">(optional)</span></label>
+        <textarea></textarea>
+        <div>
+            <button [routerLink]="['exit']" (click)="onContact()" class="btn btn-primary" type="submit">Contact Me</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,10 @@
+<div *ngIf="view === 'landing'" class="card landing-container">
+    <h1 class="landing-header">Josh Murphy</h1>
+    <h3>Web Developer</h3>
+    <p class="landing-text">MEAN stack specialist</p>
+    <a class="btn-hire" (click)="onSwitch()">Hire</a>
+</div>
+
+<div *ngIf="view === 'hire'" class="card form-container container-fluid">
+    <app-contact-form></app-contact-form>
+</div>

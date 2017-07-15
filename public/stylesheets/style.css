@@ -1,8 +1,35 @@
+html,
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #e6e6e6;
 }
 
-a {
-  color: #00B7FF;
+.card {
+    margin: 10px 5px 0 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    background-color: #fff;
+    padding: 25px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(125, 0, 0, 0.4);
+}
+
+.switch-div {
+    text-align: right;
+}
+
+.switch-link {
+    cursor: pointer;
+    padding: 5px;
+    background-color: lightgrey;
+    color: #000;
+    border-radius: 50px;
+    width: 5px;
+    height: 5px;
+}
+
+.switch-link:hover {
+    background-color: maroon;
+    text-decoration: none;
 }

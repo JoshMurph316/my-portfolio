@@ -1,0 +1,7 @@
+.footer-container {
+    margin-top: 25px;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+.footer-container:hover {}
