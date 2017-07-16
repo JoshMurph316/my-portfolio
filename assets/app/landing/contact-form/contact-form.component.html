@@ -1,33 +1,56 @@
 <h3>Contact me</h3>
 <form class="form-group">
-    <div class="col-xs-8">
+    <div class=" form-container col-xs-12 col-md-8">
+
         <label for="name">name:</label>
         <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
 
         <label for="email">email:</label>
         <input class="form-control" type="email" name="email" id="email" placeholder="email" required>
 
-        <br>
+        <div class="radio-container row">
+            <div class="col-xs-12 col-md-5">
 
-        <h4>Reason for reaching out:</h4>
-        <label [ngClass]="{active: radio === 'job'}" class="radio-btn">
+                <h4>Reason for contact:</h4>
+                <label [ngClass]="{active: radio === 'job'}" class="radio-btn">
                     <input class="radio-input" (click)="onRadio('job')" type="radio" name="options" id="option1" autocomplete="off">
                 Job
                 </label>
-        <label [ngClass]="{active: radio === 'project'}" class="radio-btn">
+                <label [ngClass]="{active: radio === 'project'}" class="radio-btn">
                     <input class="radio-input" (click)="onRadio('project')" type="radio" name="options" id="option2" autocomplete="off" checked>
                     Project
                 </label>
-        <label [ngClass]="{active: radio === 'other'}" class="radio-btn">
+                <label [ngClass]="{active: radio === 'other'}" class="radio-btn other-btn">
                     <input class="radio-input" (click)="onRadio('other')" type="radio" name="options" id="option3" autocomplete="off">
                     Other
                 </label>
+
+            </div>
+
+            <div class="col-xs-12 col-md-7 pop-col">
+
+                <div class="pop-container">
+                    <p *ngIf="radio === 'job'" class="pop-content">want to hire me for a full time position?</p>
+                    <p *ngIf="radio === 'project'" class="pop-content">need help with a personal project</p>
+                    <p *ngIf="radio === 'other'" class="pop-content">something else? please leave a description</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-    <div class="col-xs-4">
-        <label for="message">brief message <span class="optional-text">(optional)</span></label>
-        <textarea></textarea>
+    <div class="col-md-4 col-xs-12">
+
+        <label for="message">brief message 
+            <span *ngIf="radio === 'job'" class="optional-text">(optional)</span>
+            <span *ngIf="radio === 'project'" class="optional-text">(optional)</span>
+            <span *ngIf="radio === 'other'" class="optional-text">(required)</span>
+        </label>
+        <textarea [required]="radio === 'other'"></textarea>
         <div>
             <button [routerLink]="['exit']" (click)="onContact()" class="btn btn-primary" type="submit">Contact Me</button>
         </div>
+
     </div>
+
 </form>

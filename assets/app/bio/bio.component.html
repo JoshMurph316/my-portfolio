@@ -1,8 +1,16 @@
-<div class="card">
-    <img class="bio-img img-responsive" src="/images/army-shot.jpg" alt="bio-pic">
-    <div class="bio-text">
-        <p class="bio-p">Location: New Jersey</p>
-        <p class="bio-p">Age: 25</p>
-        <p class="bio-p">Occupation: Web Developer</p>
+<div class="card container-fluid">
+    <div class="switch-div">
+        <a class="switch-link" (click)="onBioSwitch()"><i class="fa fa-arrows-v" aria-hidden="true"></i></a>
+    </div>
+    <div *ngIf="about === 'bio'">
+        <img class="bio-img img-responsive" src="/images/army-shot.jpg" alt="bio-pic">
+        <div class="bio-text">
+            <p class="bio-p">Location: New Jersey</p>
+            <p class="bio-p">Age: 25</p>
+            <p class="bio-p">Occupation: Web Developer</p>
+        </div>
+    </div>
+    <div *ngIf="about === 'education'">
+        <app-education></app-education>
     </div>
 </div>

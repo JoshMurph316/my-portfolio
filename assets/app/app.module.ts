@@ -21,6 +21,7 @@ import { FrontEndComponent } from "./skills/front-end/front-end.component";
 import { ProgressionComponent } from "./skills/progression/progression.component";
 import { ContactFormComponent } from "./landing/contact-form/contact-form.component";
 import { PastJobComponent } from "./work-history/past-job/past-job.component";
+import { EducationComponent } from "./bio/education/education.component";
 
 @NgModule({
     declarations: [
@@ -36,6 +37,7 @@ import { PastJobComponent } from "./work-history/past-job/past-job.component";
         LandingComponent,
         ProgressionComponent,
         FrontEndComponent,
+        EducationComponent,
         BackEndComponent,
         PastJobComponent,
         DevOpsComponent,

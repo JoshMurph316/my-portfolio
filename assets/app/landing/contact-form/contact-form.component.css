@@ -1,9 +1,15 @@
+.form-container {}
+
 textarea {
     resize: none;
     height: 200px;
     border: 1px solid lightblue;
     border-radius: 5px;
     width: 100%;
+}
+
+.radio-input {
+    display: none;
 }
 
 .radio-btn {
@@ -15,24 +21,38 @@ textarea {
     border-radius: 5px;
 }
 
-.active {
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: lightblue;
-    color: #000;
-    border-radius: 5px;
-}
-
 .radio-btn:hover {
     background-color: lightblue;
     color: #000;
 }
 
-.radio-input {
-    display: none;
+.active {
+    background-color: lightblue;
+    color: #000;
 }
+
+.other-btn {}
+
+.radio-container {}
 
 .optional-text {
     color: grey;
     font-size: .8em;
+}
+
+.pop-col {
+    padding: 6% 0;
+}
+
+.pop-container {
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+}
+
+.pop-content {
+    margin: 0;
+    padding: 15px;
 }

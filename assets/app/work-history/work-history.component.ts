@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class WorkHistoryComponent implements OnInit {
     history = 'projects';
+    image = '';
 
     constructor() { }
 
@@ -19,5 +20,8 @@ export class WorkHistoryComponent implements OnInit {
         } else {
             this.history = 'projects'
         }
+    }
+    onImage(pic) {
+        this.image = pic;
     }
 }

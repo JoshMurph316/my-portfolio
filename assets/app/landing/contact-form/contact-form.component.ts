@@ -14,8 +14,8 @@ export class ContactFormComponent implements OnInit {
     ngOnInit() { }
 
     onRadio(radioInfo) {
-        this.radio = radioInfo
-        console.log(this.radio);
+        this.radio = radioInfo;
+        
     }
     onContact() {
 

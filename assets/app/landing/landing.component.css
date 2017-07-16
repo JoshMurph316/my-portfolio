@@ -1,11 +1,38 @@
-.landing-container {
-    text-align: center;
+.card {
+    text-align: right;
 }
-
-.form-container {}
 
 .landing-text {
     padding: 5px 0;
+    color: grey;
+}
+
+.landing-header {}
+
+.subheader {}
+
+.fa-stack {
+    font-size: .5em;
+}
+
+.stack-m {
+    color: #449A35;
+    font-size: 1.3em;
+}
+
+.stack-e {
+    color: #FF9327;
+    font-size: 1.3em;
+}
+
+.stack-a {
+    color: #E62A39;
+    font-size: 1.3em;
+}
+
+.stack-n {
+    color: #99BC56;
+    font-size: 1.3em;
 }
 
 .btn-hire {
