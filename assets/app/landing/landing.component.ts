@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from "../app.service";
 
 @Component({
     selector: 'app-landing',
     templateUrl: 'landing.component.html',
-    styleUrls: ['./landing.component.css']
+    styleUrls: ['./landing.component.css'],
+    providers: [AppService]
 })
 
 export class LandingComponent implements OnInit {
-    view = 'landing';
+
+    view: string = 'landing';
     
+    constructor(private appService: AppService) { }
 
-    constructor() { }
+    ngOnInit() {
+        
+    }
 
-    ngOnInit() { }
-
-    onSwitch() {
-        if (this.view === 'landing') {
-            this.view = 'hire'
-        } else {
-            this.view = 'landing'
-        }
+    onSwitch(newView: string) {
+        this.appService.onContactViewChange(newView);
+        this.view = this.appService.contactView;
     }
 }

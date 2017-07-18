@@ -1,16 +1,16 @@
-.intrest-header {
+.side-header {
     font-size: 1.5em;
     font-family: 'Arvo', serif;
     color: #105B63;
     padding-bottom: 15px;
 }
 
-.intrest-text {
-    font-size: 1em;
+.side-link {
+    color: #7F6927;
     font-family: 'Roboto Slab', serif;
-    color: #707070;
 }
 
-.intrest-p {
-    padding: 0 0 5px 5px;
+.side-link:hover {
+    color: #105B63;
+    text-decoration: none;
 }

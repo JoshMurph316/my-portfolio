@@ -12,24 +12,24 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(125, 0, 0, 0.4);
+    box-shadow: 0 8px 16px 0 rgba(100, 0, 0, 0.4);
 }
 
-.switch-div {
+.switch-div-right {
     text-align: right;
+}
+
+.switch-div-left {
+    text-align: left;
 }
 
 .switch-link {
     cursor: pointer;
     padding: 5px;
-    background-color: lightgrey;
-    color: #000;
-    border-radius: 50px;
-    width: 5px;
-    height: 5px;
+    color: #105B63;
+    font-size: 1.2em;
 }
 
 .switch-link:hover {
-    background-color: maroon;
     text-decoration: none;
 }

@@ -1,7 +1,20 @@
-.router-content {
-    padding: 20px;
+.tab-list {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2em;
+}
+
+.tab-list:hover {
+    cursor: pointer;
 }
 
 .tab-links:hover {
-    cursor: pointer;
+    color: #105B63;
+    text-decoration: none;
+}
+
+.skills-header {
+    font-family: 'Roboto Slab', serif;
+    color: #105B63;
+    font-size: 2.8em;
+    padding-bottom: 5px;
 }

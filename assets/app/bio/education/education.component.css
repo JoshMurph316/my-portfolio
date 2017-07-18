@@ -1,0 +1,23 @@
+.info-btn {
+    cursor: pointer;
+    font-size: .5em;
+    color: #707070;
+}
+
+.edu-header {
+    font-size: 2em;
+    color: #7F6927;
+    padding-top: 15px;
+}
+
+.edu-subheader {
+    font-size: 1.2em;
+    color: #707070;
+}
+
+.edu-content {
+    font-size: 1.1em;
+    color: #105B63;
+    font-family: 'Roboto Slab', serif;
+    padding-top: 5px;
+}

@@ -1,3 +1,54 @@
-.skill-container {
+.main-container {
     text-align: center;
+    color: #b0b0b0;
+    font-size: 1.5em;
+    font-family: 'Roboto Slab', serif;
+    padding: 5% 0;
+}
+
+.front-header {
+    color: #105B63;
+    font-size: 1.3em;
+    font-family: 'Roboto Slab', serif;
+    padding: 10px 5px 25px 5px;
+}
+
+.bottom-text {
+    border-radius: 0 0 10px 10px;
+}
+
+.skill-house {
+    padding: 0 0 25px 0;
+}
+
+.skill-col {
+    padding: 0;
+}
+
+.text {
+    margin: 0;
+}
+
+.skill-container {
+    background-color: #105B63;
+    color: #FFFAD5;
+    border-radius: 10px 10px 0 0;
+    padding: 8px 10px;
+    width: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.skill-container:hover {
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 1);
+}
+
+.sub-skill {
+    margin: auto;
+    width: 95%;
+    border: .5px solid lightgrey;
+    border-top: none;
+    background-color: #FFFAD5;
+    color: #105B63;
 }

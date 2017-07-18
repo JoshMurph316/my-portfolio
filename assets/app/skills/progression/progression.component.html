@@ -1,15 +1,38 @@
 <div class="row">
-
-    <h4>Learning Progress <i class="fa fa-info-circle" aria-hidden="true"></i></h4>
     <div class="col-md-4">
-        <div class="list-group">
-            <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">Front End</h4>
-                <p class="list-group-item-text">HTML5</p>
-                <p class="list-group-item-text">CSS3</p>
-                <p class="list-group-item-text">JavaScript</p>
-                <p class="list-group-item-text">Angular</p>
-            </a>
+        <h4 class="progress-header">My Skills Breakdown <i class="fa fa-info-circle" aria-hidden="true" (click)="onAllSwitch()"></i></h4>
+    </div>
+    <div class="col-md-8 hidden-xs">
+        <div class="key-container">
+            <p class="key-text"><span class="green-key key-div">&#9724;</span> Solid understanding</p>
+            <p class="key-text"><span class="yellow-key key-div">&#9724;</span> Currently learning</p>
+            <p class="key-text"><span class="red-key key-div">&#9724;</span> Some knowledge</p>
+            <p class="key-text"><span class="blank-key key-div">&#9724;</span> Unknown</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div *ngIf="front === 'list'" class="list-container" (click)="onFrontSwitch()">
+            <div class="list-group-link">
+                <h4 class="list-header">Front end priorities:</h4>
+                <p class="list-text">HTML5</p>
+                <p class="list-text">CSS3</p>
+                <p class="list-text">JavaScript</p>
+                <p class="list-text">Angular</p>
+            </div>
+        </div>
+        <div *ngIf="front === 'info'" class="info-container" (click)="onFrontSwitch()">
+            <div class="list-group-link">
+                <h4 class="list-header">Front End Explained:</h4>
+                <p class="list-text">Front End: Is what you actually see when you vist a website. </p>
+                <p class="list-text">HTML: (The Bones) - Is the frame or skeleton a web site is built on.</p>
+                <p class="list-text">CSS3: (The Skin) - Is the design aspect of a web site.</p>
+                <p class="list-text">JavaScript: (The Muscles) - Is how sites become interactive.</p>
+                <p class="list-text">Angular: (Steroids) - It wraps itself around the others to add more features</p>
+            </div>
         </div>
     </div>
 
@@ -22,8 +45,8 @@
                 <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 15%">
                     <span class="sr-only">15% Complete (warning)</span>
                 </div>
-                <div class="progress-bar progress-bar-danger" style="width: 10%">
-                    <span class="sr-only">10% Complete (danger)</span>
+                <div class="progress-bar progress-bar-danger" style="width: 20%">
+                    <span class="sr-only">20% Complete (danger)</span>
                 </div>
             </div>
         </div>
@@ -34,14 +57,24 @@
 <div class="row">
 
     <div class="col-md-4">
-        <div class="list-group">
-            <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">Back End</h4>
-                <p class="list-group-item-text">Node.js</p>
-                <p class="list-group-item-text">MongoDB</p>
-                <p class="list-group-item-text">Express</p>
-                <p class="list-group-item-text">Apache</p>
-            </a>
+        <div *ngIf="back === 'list'" class="list-container" (click)="onBackSwitch()">
+            <div class="list-group-link">
+                <h4 class="list-header">Back end priorities:</h4>
+                <p class="list-text">Node.js</p>
+                <p class="list-text">MongoDB</p>
+                <p class="list-text">Express</p>
+                <p class="list-text">Mocha</p>
+            </div>
+        </div>
+        <div *ngIf="back === 'info'" class="info-container" (click)="onBackSwitch()">
+            <div class="list-group-link">
+                <h4 class="list-header">Back End Explained:</h4>
+                <p class="list-text">Back End: How your website interacts with the rest of the web.</p>
+                <p class="list-text">Node.js: (The Brain) - Node is the server. It allows the site to be seen</p>
+                <p class="list-text">MongoDB: (The Memories) - Mongo is the database, where all the information is saved.</p>
+                <p class="list-text">Express: (Communication) - This allows Node to communicate with other servers.</p>
+                <p class="list-text">Mocha: (Testing) - Helps automate testing before production.</p>
+            </div>
         </div>
     </div>
 
@@ -54,8 +87,8 @@
                 <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 15%">
                     <span class="sr-only">15% Complete (warning)</span>
                 </div>
-                <div class="progress-bar progress-bar-danger" style="width: 5%">
-                    <span class="sr-only">5% Complete (danger)</span>
+                <div class="progress-bar progress-bar-danger" style="width: 10%">
+                    <span class="sr-only">10% Complete (danger)</span>
                 </div>
             </div>
         </div>
@@ -66,31 +99,47 @@
 <div class="row">
 
     <div class="col-md-4">
-        <div class="list-group">
-            <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">DevOps</h4>
-                <p class="list-group-item-text">Docker</p>
-                <p class="list-group-item-text">Amazon Web Service</p>
-                <p class="list-group-item-text">Kubernetes</p>
-                <p class="list-group-item-text">Travis</p>
-            </a>
+        <div *ngIf="devOps === 'list'" class="list-container" (click)="onDevOpsSwitch()">
+            <div class="list-group-link">
+                <h4 class="list-header">DevOps priorities:</h4>
+                <p class="list-text">Amazon Web Service</p>
+                <p class="list-text">Git/GitHub</p>
+                <p class="list-text">Docker</p>
+                <p class="list-text">Kubernetes</p>
+            </div>
+        </div>
+        <div *ngIf="devOps === 'info'" class="info-container" (click)="onDevOpsSwitch()">
+            <div class="list-group-link">
+                <h4 class="list-header">DevOps Explained:</h4>
+                <p class="list-text">DevOps: Is a merging of production and development tools.</p>
+                <p class="list-text">AWS: (The Universe) - Where your server wants to be. </p>
+                <p class="list-text">Git and GitHub: (Saved Copies) - Git and GitHub arn't the same thing. But both act as version controllers.</p>
+                <p class="list-text">Docker: (Mini World) - Docker creates a copy of the app and takes care of it.</p>
+                <p class="list-text">Kubernetes - Keeps Docker containers tight and automated.</p>
+            </div>
         </div>
     </div>
 
     <div class="col-md-8">
         <div class="progress-container">
             <div class="progress">
-                <div class="progress-bar progress-bar-success" style="width: 5%">
-                    <span class="sr-only">5% Complete (success)</span>
+                <div class="progress-bar progress-bar-success" style="width: 9%">
+                    <span class="sr-only">9% Complete (success)</span>
                 </div>
-                <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 10%">
-                    <span class="sr-only">10% Complete (warning)</span>
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 18%">
+                    <span class="sr-only">18% Complete (warning)</span>
                 </div>
-                <div class="progress-bar progress-bar-danger" style="width: 20%">
-                    <span class="sr-only">20% Complete (danger)</span>
+                <div class="progress-bar progress-bar-danger" style="width: 30%">
+                    <span class="sr-only">30% Complete (danger)</span>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bottom-info">
+                <a class="info-link" href="#">Want to learn more?</a>
+            </div>
+        </div>
+    </div>
 </div>

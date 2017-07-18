@@ -1,11 +1,11 @@
 <div class="card">
 
-    <div class="switch-div">
-        <a class="switch-link" (click)="onIntrestSwitch()"><i class="fa fa-arrows-v" aria-hidden="true"></i></a>
+    <div class="switch-div-left">
+        <a class="switch-link" (click)="onIntrestSwitch()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
     </div>
 
     <div *ngIf="intrests === 'professional'" class="professional">
-        <h4>Professional Intrests</h4>
+        <h4 class="intrest-header">Professional Intrests</h4>
         <div class="intrest-text">
             <p class="intrest-p">Full-Stack Development</p>
             <p class="intrest-p">DevOps</p>
@@ -16,7 +16,7 @@
     </div>
 
     <div *ngIf="intrests === 'personal'" class="personal">
-        <h4>Personal Intrests</h4>
+        <h4 class="intrest-header">Personal Intrests</h4>
         <div class="intrest-text">
             <p class="intrest-p">Fitness</p>
             <p class="intrest-p">Snowboarding</p>

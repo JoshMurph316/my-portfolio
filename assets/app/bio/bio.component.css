@@ -5,11 +5,28 @@
 }
 
 .bio-text {
+    font-family: 'Titillium Web', sans-serif;
     font-size: 1.3em;
-    color: #a6a6a6;
+    color: #707070;
     padding: 2px 16px;
 }
 
 .bio-p {
     list-style-type: none;
+}
+
+.stack-m {
+    color: #449A35;
+}
+
+.stack-e {
+    color: #FF9327;
+}
+
+.stack-a {
+    color: #E62A39;
+}
+
+.stack-n {
+    color: #99BC56;
 }

@@ -1,42 +1,85 @@
-.form-container {}
+.contact-heading {
+    font-family: 'Titillium Web', sans-serif;
+    color: #105B63;
+    font-size: 2.8em;
+    padding-bottom: 5px;
+}
+
+.input-label {
+    display: none;
+}
+
+.contact-input {
+    color: #105B63;
+    border: none;
+    border-bottom: 2px solid #707070;
+    display: block;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 5%;
+    width: 90%;
+    padding: 10px 0 0 10px;
+    outline: none;
+    font-size: 1.4em;
+}
+
+.radio-container {
+    padding-top: 10%;
+}
+
+.text-header {
+    font-size: 1.4em;
+    font-family: 'Titillium Web', sans-serif;
+    color: #105B63;
+}
 
 textarea {
     resize: none;
     height: 200px;
-    border: 1px solid lightblue;
+    border: 1px solid #105B63;
     border-radius: 5px;
     width: 100%;
+    margin-bottom: 10%;
+    outline: none;
 }
 
 .radio-input {
     display: none;
 }
 
+.radio-heading {
+    font-size: 1.4em;
+    font-family: 'Titillium Web', sans-serif;
+    color: #105B63;
+}
+
 .radio-btn {
     padding: 10px 15px;
     margin: 5px;
-    background-color: steelblue;
+    background-color: #105B63;
     cursor: pointer;
     color: #fff;
     border-radius: 5px;
+    font-family: 'Arvo', serif;
+    transition: all .3s ease-out;
 }
 
 .radio-btn:hover {
-    background-color: lightblue;
-    color: #000;
+    background-color: #FFFAD5;
+    color: #105B63;
 }
 
 .active {
-    background-color: lightblue;
-    color: #000;
+    background-color: #FFFAD5;
+    color: #105B63;
 }
 
-.other-btn {}
-
-.radio-container {}
-
 .optional-text {
-    color: grey;
+    color: #707070;
+    font-size: .8em;
+}
+
+.required-text {
+    color: #E62A39;
     font-size: .8em;
 }
 
@@ -46,7 +89,6 @@ textarea {
 
 .pop-container {
     text-align: center;
-    border: 1px solid lightblue;
     border-radius: 5px;
     margin: auto;
     width: 90%;
@@ -55,4 +97,23 @@ textarea {
 .pop-content {
     margin: 0;
     padding: 15px;
+    background-color: #FFFAD5;
+    color: #105B63;
+    font-size: 1.2em;
+    font-family: 'Arvo', serif;
+    transition: all .5s ease-out;
+}
+
+.send-container {
+    text-align: right;
+}
+
+.send-btn {
+    background-color: #105B63;
+    color: #FFFAD5;
+    font-size: 1.3em;
+    font-family: 'Arvo', serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
 }

@@ -1,18 +1,24 @@
-.card {
+.landing-container {
     text-align: right;
+    padding: 5% 2% 10% 0;
 }
 
 .landing-text {
-    padding: 5px 0;
-    color: grey;
+    padding: 5px 0 15px 0;
+    color: #a6a6a6;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3em;
 }
 
-.landing-header {}
-
-.subheader {}
+.landing-header {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4.5em;
+    color: #105B63;
+}
 
 .fa-stack {
     font-size: .5em;
+    cursor: pointer;
 }
 
 .stack-m {
@@ -36,15 +42,31 @@
 }
 
 .btn-hire {
-    padding: 10px 20px;
-    background-color: #a6a6a6;
-    color: lavender;
-    font-size: 1.4em;
+    font-family: 'Roboto Slab', serif;
+    padding: 10px 30px;
+    background-color: #707070;
+    color: #fff;
+    font-size: 1.5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 .btn-hire:hover {
     text-decoration: none;
-    color: #161616;
+}
+
+.stack-h:hover {
+    color: #449A35;
+}
+
+.stack-i:hover {
+    color: #FF9327;
+}
+
+.stack-r:hover {
+    color: #E62A39;
+}
+
+.stack-ee:hover {
+    color: #99BC56;
 }
