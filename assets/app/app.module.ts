@@ -27,6 +27,7 @@ import { PastJobComponent } from "./work-history/past-job/past-job.component";
 import { EducationComponent } from "./bio/education/education.component";
 import { PaidProjectsComponent } from "./work-history/paid-projects/piad-projects.component";
 import { SideProjectComponent } from "./side-projects/side-projects.component";
+import { GuruBlogComponent } from "./guru-blog/guru-blog.component";
 
 @NgModule({
     declarations: [
@@ -49,6 +50,7 @@ import { SideProjectComponent } from "./side-projects/side-projects.component";
         PaidProjectsComponent,
         DevOpsComponent,
         WorkHistoryComponent,
+        GuruBlogComponent,
         FooterComponent
     ],
     imports: [

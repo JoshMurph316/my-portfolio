@@ -2,3 +2,30 @@
     margin: 25px 0;
     text-align: center;
 }
+
+.foot-header {
+    font-size: 2em;
+    font-family: 'Roboto Slab', serif;
+    color: #105B63;
+}
+
+.foot-ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.foot-list {
+    padding: 5px;
+}
+
+.foot-link {
+    color: #105B63;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.3em;
+}
+
+.foot-link:hover {
+    color: #7F6927;
+    text-decoration: none;
+    cursor: pointer;
+}

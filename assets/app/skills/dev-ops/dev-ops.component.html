@@ -1,95 +1,187 @@
 <div class="main-container container-fluid">
-    <p class="front-header">DevOps tools I have experience with</p>
 
-    <div class="row">
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">AWS</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: proficient</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Git/GitHub</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: proficient</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
+    <div class="skill-heading">
+        <p class="front-header">DevOps tools and languages I use</p>
+        <p class="front-subheader">click for more details
+            <span *ngIf="allSwitch === 'basic'" class="fa-stack info-icon" (click)="onAllDetail()">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-info fa-stack-1x"></i>
+            </span>
+            <i *ngIf="allSwitch === 'detail'" class="fa fa-times-circle close-icon" aria-hidden="true" (click)="onAllClose()"></i>
+        </p>
     </div>
 
     <div class="row">
+        <div class="col-md-10 col-md-offset-1">
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Heroku</p>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="aws === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onAWSDetails()">
+                            <p class="text">AWS</p>
+                        </div>
+                        <p class="sub-skill text">less than 1-yr</p>
+                        <p class="sub-skill text">level: basic</p>
+                        <p class="sub-skill text bottom-text">Cloud Platform</p>
+                    </div>
+                    <div *ngIf="aws === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onAWSDetails()">
+                            <p class="text">AWS</p>
+                        </div>
+                        <p class="sub-skill text">A place to house and take care of your app.</p>
+                        <p class="sub-skill text">Filled with dozens of cloud compuiting utilities.</p>
+                        <p class="sub-skill text bottom-text">Comes with a bunch of features that enhance a basic application.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: proficient</p>
-                    <p class="sub-skill text bottom-text">skill</p>
+
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="git === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onGitDetails()">
+                            <p class="text">Git and GitHub</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: proficient</p>
+                        <p class="sub-skill text bottom-text">Version Controllers</p>
+                    </div>
+                    <div *ngIf="git === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onGitDetails()">
+                            <p class="text">Git and GitHub</p>
+                        </div>
+                        <p class="sub-skill text">Git is local verion control, basically it keeps saved versions of an app.</p>
+                        <p class="sub-skill text">Git Hub is a cloud based save bank. It also has features to make apps better.</p>
+                        <p class="sub-skill text bottom-text">Git and GtiHub aren't the same thing, but they do work together.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="heroku === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onHerokuDetails()">
+                            <p class="text">Heroku</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: proficient</p>
+                        <p class="sub-skill text bottom-text">Cloud Platform</p>
+                    </div>
+                    <div *ngIf="heroku === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onHerokuDetails()">
+                            <p class="text">Heroku</p>
+                        </div>
+                        <p class="sub-skill text">Like AWS, Heroku is a cloud computing platform.</p>
+                        <p class="sub-skill text">Made by Salesfore, and very easy to pick up and serve an app.</p>
+                        <p class="sub-skill text bottom-text">Heroku is for simple quick live tests.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="docker === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onDockerDetails()">
+                            <p class="text">Docker <i class="fa fa-info-circle" aria-hidden="true"></i></p>
+                        </div>
+                        <p class="sub-skill text">less than 1-yr</p>
+                        <p class="sub-skill text">level: basic</p>
+                        <p class="sub-skill text bottom-text">Containers</p>
+                    </div>
+                    <div *ngIf="docker === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onDockerDetails()">
+                            <p class="text">Docker <i class="fa fa-info-circle" aria-hidden="true"></i></p>
+                        </div>
+                        <p class="sub-skill text">Containers are used to help make deployment less of a hassle.</p>
+                        <p class="sub-skill text">Docker allows the program to work on basically any production environment.</p>
+                        <p class="sub-skill text bottom-text">Docker also comes with a bunch of tools that I don't even fully understad yet.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Docker</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">less than 1-yr</p>
-                    <p class="sub-skill text">level: basic</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
         </div>
-
     </div>
 
 
     <div class="row">
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Kubernetes</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">less than 1-yr</p>
-                    <p class="sub-skill text">level: basic</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-5 skill-col">
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Travis CI</p>
+                <div class="skill-house">
+                    <div *ngIf="kubernetes === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onKubernetesDetails()">
+                            <p class="text">Kubernetes <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <p class="sub-skill text">less than 1-yr</p>
+                        <p class="sub-skill text">level: basic</p>
+                        <p class="sub-skill text bottom-text">Deployment Automation</p>
+                    </div>
+                    <div *ngIf="kubernetes === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onKubernetesDetails()">
+                            <p class="text">Kubernetes <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <p class="sub-skill text">Schedules and runs your Docker containers.</p>
+                        <p class="sub-skill text">Works well with Docker containers and AWS.</p>
+                        <p class="sub-skill text bottom-text">Also helps with continuous integration.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">less than 1-yr</p>
-                    <p class="sub-skill text">level: basic</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
+
             </div>
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="travisCI === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onTravisCIDetails()">
+                            <p class="text">Travis <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <p class="sub-skill text">less than 1-yr</p>
+                        <p class="sub-skill text">level: basic</p>
+                        <p class="sub-skill text bottom-text">Countinus Integration</p>
+                    </div>
+                    <div *ngIf="travisCI === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onTravisCIDetails()">
+                            <p class="text">Travis <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <p class="sub-skill text">Travis CI is a tool to manage the lifecycle of an app.</p>
+                        <p class="sub-skill text">Runs code continuouly, making things much faster.</p>
+                        <p class="sub-skill text bottom-text">Bundling all these tools creates a cool automated workflow.</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
-
+    <div class="row">
+        <div class="col-md-12">
+            <div class="skill-footer">
+                <p>skill level map:</p>
+                <p>basic <i class="fa fa-long-arrow-right" aria-hidden="true"></i> competent <i class="fa fa-long-arrow-right" aria-hidden="true"></i> proficient <i class="fa fa-long-arrow-right" aria-hidden="true"></i> expert <i class="fa fa-long-arrow-right"
+                        aria-hidden="true"></i> guru </p>
+                <p><i class="fa fa-info-circle" aria-hidden="true"></i> These tools are still relativly new to me, I plan to give more detailed explainations eventually.</p>
+            </div>
+        </div>
+    </div>
 </div>

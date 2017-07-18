@@ -1,95 +1,172 @@
 <div class="main-container container-fluid">
-    <p class="front-header">Front end languages I have experience with</p>
+
+    <div class="skill-heading">
+        <p class="front-header">Front end tools and languages I use</p>
+        <p class="front-subheader">click for more details
+            <span *ngIf="allSwitch === 'basic'" class="fa-stack info-icon" (click)="onAllDetail()">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-info fa-stack-1x"></i>
+            </span>
+            <i *ngIf="allSwitch === 'detail'" class="fa fa-times-circle close-icon" aria-hidden="true" (click)="onAllClose()"></i>
+        </p>
+    </div>
 
     <div class="row">
+        <div class="col-md-10 col-md-offset-1">
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">HTML5</p>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="html === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onHTMLDetails()">
+                            <p class="text">HTML5</p>
+                        </div>
+                        <p class="sub-skill text">3-yrs exp.</p>
+                        <p class="sub-skill text">level: proficient</p>
+                        <p class="sub-skill text bottom-text">Markup Language</p>
+                    </div>
+                    <div *ngIf="html === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onHTMLDetails()">
+                            <p class="text">HTML5</p>
+                        </div>
+                        <p class="sub-skill text">Foundation every site is built on.</p>
+                        <p class="sub-skill text">Essential for (SEO)</p>
+                        <p class="sub-skill text bottom-text">Controls whats on the page.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">3-yrs exp.</p>
-                    <p class="sub-skill text">level: proficient</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
+
             </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div class="skill-container" (click)="onAngularDetails()">
+                        <p class="text">Angular</p>
+                    </div>
+                    <div *ngIf="angular === 'basic'" class="sub-skill-container">
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">JS Framework</p>
+                    </div>
+                    <div *ngIf="angular === 'detail'" class="sub-skill-container">
+                        <p class="sub-skill text">An application framework, for advanced projects.</p>
+                        <p class="sub-skill text">Used to make single page applications.</p>
+                        <p class="sub-skill text bottom-text">Allows apps easily to grow as needed.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div class="skill-container" (click)="onCSS3Details()">
+                        <p class="text">CSS3</p>
+                    </div>
+                    <div *ngIf="css3 === 'basic'" class="sub-skill-container">
+                        <p class="sub-skill text">3-yrs exp.</p>
+                        <p class="sub-skill text">level: proficient</p>
+                        <p class="sub-skill text bottom-text">Style</p>
+                    </div>
+                    <div *ngIf="css3 === 'detail'" class="sub-skill-container">
+                        <p class="sub-skill text">The style on a page. Colors, sizes, ect.</p>
+                        <p class="sub-skill text">Wraps itself around HTML.</p>
+                        <p class="sub-skill text bottom-text">Used to give each page a unique design.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div class="skill-container" (click)="onBootstrapDetails()">
+                        <p class="text">Bootstrap</p>
+                    </div>
+                    <div *ngIf="bootstrap === 'basic'" class="sub-skill-container">
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: proficient</p>
+                        <p class="sub-skill text bottom-text">Framework</p>
+                    </div>
+                    <div *ngIf="bootstrap === 'detail'" class="sub-skill-container">
+                        <p class="sub-skill text">Filled with common components for web design.</p>
+                        <p class="sub-skill text">Easly move between small and large screens.</p>
+                        <p class="sub-skill text bottom-text">Quickly adds complex elements to a page.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div class="skill-container" (click)="onJSDetails()">
+                        <p class="text">JavaScript</p>
+                    </div>
+                    <div *ngIf="js === 'basic'" class="sub-skill-container">
+                        <p class="sub-skill text">3-yr exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">Object-oriented</p>
+                    </div>
+                    <div *ngIf="js === 'detail'" class="sub-skill-container">
+                        <p class="sub-skill text">Allows web pages react to events.</p>
+                        <p class="sub-skill text">Used to talk to the back end of the application.</p>
+                        <p class="sub-skill text bottom-text">The base language across the web.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div class="skill-container" (click)="onjQueryDetails()">
+                        <p class="text">jQuery <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                    </div>
+                    <div *ngIf="jQuery === 'basic'" class="sub-skill-container">
+                        <p class="sub-skill text">2-yrs exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">JS Library</p>
+                    </div>
+                    <div *ngIf="jQuery === 'detail'" class="sub-skill-container">
+                        <p class="sub-skill text">Makes managing events with JavaScript easier.</p>
+                        <p class="sub-skill text">Simplifies AJAX requests, making code cleaner.</p>
+                        <p class="sub-skill text bottom-text">AJAX requests make sites much faster.</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Angular</p>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="skill-footer">
+                    <p>skill level map:</p>
+                    <p>basic <i class="fa fa-long-arrow-right" aria-hidden="true"></i> competent <i class="fa fa-long-arrow-right" aria-hidden="true"></i> proficient <i class="fa fa-long-arrow-right" aria-hidden="true"></i> expert <i class="fa fa-long-arrow-right"
+                            aria-hidden="true"></i> guru </p>
+                    <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> *I feel jQuery is slowly growing unnecessary, I won't be using it in future projects.</p>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
+
             </div>
         </div>
 
     </div>
-
-    <div class="row">
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">CSS3</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">3-yrs exp.</p>
-                    <p class="sub-skill text">level: proficient</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Bootstrap</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div class="row">
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Vue.js</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">less than 1-yr</p>
-                    <p class="sub-skill text">level: basic</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">React</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">less than 1-yr</p>
-                    <p class="sub-skill text">level: basic</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
 </div>

@@ -1,91 +1,180 @@
 <div class="main-container container-fluid">
-    <p class="front-header">Back end languages I have experience with</p>
 
-    <div class="row">
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">NodeJS</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Express</p>
-                </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
-            </div>
-        </div>
-
+    <div class="skill-heading">
+        <p class="front-header">Back end tools and languages I use</p>
+        <p class="front-subheader">click for more details
+            <span *ngIf="allSwitch === 'basic'" class="fa-stack info-icon" (click)="onAllDetail()">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-info fa-stack-1x"></i>
+            </span>
+            <i *ngIf="allSwitch === 'detail'" class="fa fa-times-circle close-icon" aria-hidden="true" (click)="onAllClose()"></i>
+        </p>
     </div>
 
     <div class="row">
+        <div class="col-md-10 col-md-offset-1">
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Mocha</p>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="node === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onNodeDetails()">
+                            <p class="text">Node.js</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: proficient</p>
+                        <p class="sub-skill text bottom-text">Server</p>
+                    </div>
+                    <div *ngIf="node === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onNodeDetails()">
+                            <p class="text">Node.js</p>
+                        </div>
+                        <p class="sub-skill text">Uses JavaScript on the server. (making it easy to use)</p>
+                        <p class="sub-skill text">Serves up content for the user to see.</p>
+                        <p class="sub-skill text bottom-text">Acts as the central hub for the app.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
+
             </div>
-        </div>
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">MongoDB</p>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="express === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onExpressDetails()">
+                            <p class="text">Express.js</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">Web Framework</p>
+                    </div>
+                    <div *ngIf="express === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onExpressDetails()">
+                            <p class="text">Express.js</p>
+                        </div>
+                        <p class="sub-skill text">Makes routing on the Node.js server very simple.</p>
+                        <p class="sub-skill text">Used to make requests from your server to others.</p>
+                        <p class="sub-skill text bottom-text">Very simple to get up and going.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
+
             </div>
-        </div>
 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="mongodb === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onMongoDBDetails()">
+                            <p class="text">MongoDB</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">Database</p>
+                    </div>
+                    <div *ngIf="mongodb === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onMongoDBDetails()">
+                            <p class="text">MongoDB</p>
+                        </div>
+                        <p class="sub-skill text">Uses JSON making it easy for JavaScript developers.</p>
+                        <p class="sub-skill text">Works well with Node.js using mongoose middleware.</p>
+                        <p class="sub-skill text bottom-text">NoSQL Database, so it's fast and grows well.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="mocha === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onMochaDetails()">
+                            <p class="text">Mocha</p>
+                        </div>
+                        <p class="sub-skill text">less than 1-yr</p>
+                        <p class="sub-skill text">level: basic</p>
+                        <p class="sub-skill text bottom-text">Test Framework</p>
+                    </div>
+                    <div *ngIf="mocha === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onMochaDetails()">
+                            <p class="text">Mocha</p>
+                        </div>
+                        <p class="sub-skill text">Helps testing code throughtout the life of the app.</p>
+                        <p class="sub-skill text">Runs async just like the rest of the MEAN stack.</p>
+                        <p class="sub-skill text bottom-text">Easy to get up and running with npm.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 
     <div class="row">
+        <div class="col-md-10 col-md-offset-1">
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">RESTful API's</p>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="rest === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onRestDetails()">
+                            <p class="text">RESTful APIs</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">Structure for Web</p>
+                    </div>
+                    <div *ngIf="rest === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onRestDetails()">
+                            <p class="text">RESTful APIs</p>
+                        </div>
+                        <p class="sub-skill text">Used to tell your app how to speak with other app.</p>
+                        <p class="sub-skill text">Idea that all thing on the web should follow a similar request style.</p>
+                        <p class="sub-skill text bottom-text">Examples would be forms and database requests.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">1-yrs exp.</p>
-                    <p class="sub-skill text">level: competent</p>
-                    <p class="sub-skill text bottom-text">skill</p>
-                </div>
+
             </div>
-        </div>
 
-        <div class="col-xs-12 col-md-4 col-md-offset-1 skill-col">
-            <div class="skill-house">
-                <div class="skill-container">
-                    <p class="text">Authentication(JWT)</p>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 skill-col">
+
+                <div class="skill-house">
+                    <div *ngIf="auth === 'basic'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onAuthDetails()">
+                            <p class="text">Authentication(JWT)</p>
+                        </div>
+                        <p class="sub-skill text">1-yrs exp.</p>
+                        <p class="sub-skill text">level: competent</p>
+                        <p class="sub-skill text bottom-text">Security for the App</p>
+                    </div>
+                    <div *ngIf="auth === 'detail'" class="sub-skill-container">
+                        <div class="skill-container" (click)="onAuthDetails()">
+                            <p class="text">Authentication(JWT)</p>
+                        </div>
+                        <p class="sub-skill text">Passport.js is a middleware that uses (JWT)</p>
+                        <p class="sub-skill text">(JWT) stands for JSON Web Tokens, used to encrypt your data.</p>
+                        <p class="sub-skill text bottom-text">Like the other middleware, Passport is very simple.</p>
+                    </div>
                 </div>
-                <div class="sub-skill-container">
-                    <p class="sub-skill text">less than 1-yr</p>
-                    <p class="sub-skill text">level: basic</p>
-                    <p class="sub-skill text bottom-text">skill</p>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="skill-footer">
+                    <p>skill level map:</p>
+                    <p>basic <i class="fa fa-long-arrow-right" aria-hidden="true"></i> competent <i class="fa fa-long-arrow-right" aria-hidden="true"></i> proficient <i class="fa fa-long-arrow-right" aria-hidden="true"></i> expert <i class="fa fa-long-arrow-right"
+                            aria-hidden="true"></i> guru </p>
                 </div>
             </div>
         </div>

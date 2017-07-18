@@ -6,11 +6,27 @@
     padding: 5% 0;
 }
 
+.skill-heading {
+    padding: 1% 0 5% 0;
+}
+
 .front-header {
     color: #105B63;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-family: 'Roboto Slab', serif;
-    padding: 10px 5px 25px 5px;
+}
+
+.front-subheader {
+    font-size: .8em;
+}
+
+.info-icon {
+    font-size: .5em;
+    cursor: pointer;
+}
+
+.close-icon {
+    cursor: pointer;
 }
 
 .bottom-text {
@@ -27,6 +43,7 @@
 
 .text {
     margin: 0;
+    padding: 5px 10px;
 }
 
 .skill-container {
@@ -34,7 +51,6 @@
     color: #FFFAD5;
     border-radius: 10px 10px 0 0;
     padding: 8px 10px;
-    width: 95%;
     margin: auto;
     cursor: pointer;
     transition: all 0.3s;
@@ -46,9 +62,17 @@
 
 .sub-skill {
     margin: auto;
-    width: 95%;
     border: .5px solid lightgrey;
     border-top: none;
     background-color: #FFFAD5;
     color: #105B63;
+}
+
+.skill-footer {
+    font-size: .8em;
+}
+
+.fa-exclamation-triangle {
+    color: goldenrod;
+    font-size: .7em;
 }

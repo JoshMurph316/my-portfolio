@@ -11,6 +11,11 @@
     padding: 2px 16px;
 }
 
+.fa-stack {
+    font-size: .5em;
+    cursor: pointer;
+}
+
 .bio-p {
     list-style-type: none;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
     selector: 'app-work-history',
@@ -8,20 +9,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class WorkHistoryComponent implements OnInit {
     history = 'projects';
-    image = '';
 
     constructor() { }
 
     ngOnInit() { }
 
     onWorkSwitch() {
-        if (this.history === 'projects') {
-            this.history = 'work'
-        } else {
-            this.history = 'projects'
-        }
-    }
-    onImage(pic) {
-        this.image = pic;
+        this.history = (this.history === 'projects' ? 'work' : 'projects');
     }
 }
