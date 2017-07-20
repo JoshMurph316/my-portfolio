@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from "../app.service";
+
+import { ViewChangeService } from "../home/view-change.service";
 
 @Component({
     selector: 'app-landing',
     templateUrl: 'landing.component.html',
-    styleUrls: ['./landing.component.css']
+    styleUrls: ['./landing.component.css'],
+    providers: [ViewChangeService]
 })
 
 export class LandingComponent implements OnInit {
 
     view: string = 'landing';
     
-    constructor() { }
+    constructor(private viewChangeService: ViewChangeService) {
+    }
 
     ngOnInit() {
         
@@ -19,5 +22,6 @@ export class LandingComponent implements OnInit {
 
     onSwitch(newView: string) {
         this.view = newView
+        this.viewChangeService.changeView(newView);
     }
 }

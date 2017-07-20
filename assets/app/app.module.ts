@@ -58,6 +58,7 @@ import { GuruBlogComponent } from "./guru-blog/guru-blog.component";
         PopoverModule,
         routing
     ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
